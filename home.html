@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RESUME </title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: orange;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            background: #222;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #ff8c00;
+        }
+        .download-btn {
+            background: orange;
+            color: black;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .resume-container {
+            text-align: center;
+            padding: 20px;
+        }
+        .resume-heading {
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .resume-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            background: #222;
+            border-radius: 10px;
+            margin: 20px;
+            max-width: 900px;
+        }
+        .resume-content {
+            max-width: 600px;
+        }
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin: 20px;
+        }
+        .cta {
+            margin: 40px;
+            text-align: center;
+        }
+        .end-text {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .resume-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">MY RESUME</div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="index.html">Logout</a>
+            <a href="exit.html">Exit</a>
+            <a href="resume.pdf" class="download-btn" download>Download Resume</a>
+        </nav>
+    </header>
+
+    <div class="resume-container">
+        <div class="resume-heading">Resume</div>
+    </div>
+
+    <div class="resume-section">
+        <div class="resume-content">
+            <p><strong>Badineni Harshith</strong><br>
+            Address: 2-7-334, Flat No. 203 VN Residence, Warangal, Telangana, 506001<br>
+            Email: <a href="mailto:badineniharshith.49@gmail.com">badineniharshith.49@gmail.com</a><br>
+            Phone: 9493410900<br>
+            GitHub: <a href="https://github.com/badineniharshith" target="_blank">github.com/badineniharshith</a></p>
+            
+            <p><strong>Career Objective:</strong><br>
+            Passionate and enthusiastic B. Tech second-year student in Computer Science seeking an internship opportunity at Infosys.</p>
+            
+            <p><strong>Education:</strong><br>
+            <strong>Bachelor of Technology (B. Tech)</strong><br>GITAM, Hyderabad<br>Computer Science and Engineering<br>CGPA: 7.83/10 (Till Sem 2)<br>Duration: 2023 – 2027</p>
+            
+            <p><strong>Technical Skills:</strong><br>
+            C, C++, Java, Python, HTML, SQLite, Microsoft Office, DSA</p>
+            
+            <p><strong>Projects:</strong><br>
+                <strong>1. Basic Weather App using API</strong><br>
+                Tools: Python, Matplotlib</p>
+            <p><strong>2. Path Tracker</strong><br>
+                Tools: Python, Data Structures</p>
+                
+            <p><strong>Certifications:</strong><br>
+                AI/ML course at IIIT Hyderabad (ends in March)</p>
+            
+            <p><strong>Extracurricular Activities:</strong><br>
+                Participated in esports at GITAM University</p>
+            
+            <p><strong>Strengths:</strong><br>
+                Analytical skills, quick learner, team player</p>
+
+            <p><strong>Personal Details:</strong><br>
+                DOB: 20/11/2005<br>
+                Languages: English, Telugu, Hindi<br>
+                Hobbies: Reading, sports, drawing</p>
+            
+            <p><strong>Declaration:</strong><br>
+                I hereby declare that the information provided above is true.</p>
+            <p><strong>BADINENI HARSHITH</strong></p>
+        </div>
+        <img src="photo.jpg" alt="Passport Photo" class="photo">
+    </div>
+
+    <div class="cta">
+        <a href="resume.pdf" class="download-btn" download>Download Resume</a>
+    </div>
+
+    <div class="end-text">
+        END OF PAGE
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('background.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .nav-bar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .nav-bar button {
+            padding: 12px 18px;
+            border: none;
+            background: #ff8c00;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .nav-bar button:hover {
+            background: #ff6500;
+            transform: scale(1.1);
+        }
+        .header-text {
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            text-align: left;
+            max-width: 50%;
+        }
+        .header-text span {
+            color: #ff8c00;
+            font-size: 60px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            width: 90%;
+            max-width: 400px;
+            position: absolute;
+            right: 5%;
+            text-align: center;
+            transition: transform 0.5s ease-in-out;
+        }
+        .message {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+        .switch-btn {
+            background: #444;
+            color: white;
+            padding: 8px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            .header-text {
+                font-size: 32px;
+                top: 10%;
+                left: 5%;
+                max-width: 90%;
+            }
+            .container {
+                position: static;
+                margin-top: 50px;
+                width: 80%;
+                max-width: none;
+            }
+            .nav-bar {
+                flex-direction: column;
+                align-items: flex-end;
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .header-text {
+                font-size: 24px;
+                top: 5%;
+            }
+            .header-text span {
+                font-size: 36px;
+            }
+            .container {
+                padding: 20px;
+            }
+            .nav-bar button {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <button onclick="showLogin()">Login</button>
+        <button onclick="showRegister()">Register</button>
+        <button onclick="window.location.href='exit.html'">Exit</button>
+    </div>
+    <div class="header-text">
+        WELCOME TO MY WEB PAGE
+        <div><span>HARSHITH BADINENI</span></div>
+        <div class="sub-text">Please login or register to access my Resume</div>
+    </div>
+    <div class="container" id="formContainer">
+        <h2 id="formTitle">Login</h2>
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="switch-btn" onclick="showRegister()">Create an Account</button>
+        </form>
+        <form id="registerForm" style="display: none;" onsubmit="return handleRegister(event)">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" class="btn">Create Account</button>
+            <button type="button" class="switch-btn" onclick="showLogin()">Already have an Account? Login</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+    <script>
+        function showRegister() {
+            document.getElementById("registerForm").style.display = "block";
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("formTitle").innerText = "Create New Account";
+        }
+        function showLogin() {
+            document.getElementById("registerForm").style.display = "none";
+            document.getElementById("loginForm").style.display = "block";
+            document.getElementById("formTitle").innerText = "Login";
+        }
+        function handleLogin(event) {
+            event.preventDefault();
+            document.getElementById("message").innerText = "Successful Login";
+            document.getElementById("message").style.display = "block";
+            setTimeout(() => { window.location.href = 'home.html'; }, 2000);
+        }
+        function handleRegister(event) {
+            event.preventDefault();
+            document.getElementById("message").innerText = "Successfully Registered";
+            document.getElementById("message").style.display = "block";
+            setTimeout(() => { showLogin(); document.getElementById("message").style.display = "none"; }, 2000);
+        }
+    </script>
+</body>
+</html>
