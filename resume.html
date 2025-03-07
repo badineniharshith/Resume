@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshith Badineni - Resume</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg'); /* Add your wallpaper image */
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+        }
+
+        /* Big RESUME Heading */
+        .resume-heading {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #007BFF;
+            background-color: rgba(0, 123, 255, 0.1);
+            padding: 15px;
+            border: 3px solid #007BFF;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #007BFF;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+
+        header a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #007BFF;
+            margin: 20px auto;
+            display: block;
+        }
+
+        h2 {
+            color: #007BFF;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #007BFF;
+            display: inline-block;
+            padding-bottom: 5px;
+            font-size: 1.5em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .download-buttons {
+            text-align: center;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .download-buttons a {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            flex: 1 1 auto;
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .download-buttons a:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: rgba(0, 123, 255, 0.9); /* Semi-transparent blue */
+            color: white;
+            border-radius: 8px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-page {
+            display: none;
+        }
+
+        .contact-page h2 {
+            margin-top: 0;
+        }
+
+        .contact-page form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-page input, .contact-page textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-page button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-page button:hover {
+            background-color: #0056b3;
+        }
+
+        .declaration {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-style: italic;
+            border-left: 5px solid #007BFF; /* Accent border */
+        }
+
+        .declaration p {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .declaration strong {
+            color: #007BFF;
+        }
+
+        .animate__animated {
+            animation-duration: 1s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .resume-heading {
+                font-size: 2em;
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            ul li {
+                font-size: 0.9em;
+            }
+
+            .download-buttons a {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+
+            .declaration p {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .resume-heading {
+                font-size: 1.8em;
+                padding: 8px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            header p {
+                font-size: 0.85em;
+            }
+
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            ul li {
+                font-size: 0.85em;
+            }
+
+            .download-buttons a {
+                padding: 6px 12px;
+                font-size: 0.85em;
+            }
+
+            .declaration p {
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container animate__animated animate__fadeIn">
+        <!-- Big RESUME Heading -->
+        <div class="resume-heading">
+            RESUME
+        </div>
+
+        <!-- Buttons at the Top -->
+        <div class="download-buttons">
+            <a href="cv.html">Go to CV Page</a>
+            <a href="cv.pdf" download>Download CV</a>
+            <a href="resume.pdf" download>Download Resume</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+
+        <header>
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Harshith Badineni</h1>
+            <p>Hanamkonda, Telangana, 506001 • badineniharshith.49@gmail.com • 9493410900</p>
+        </header>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Gandhi Institute of Technology and Management, Hyderabad</strong><br>Bachelor of Technology (B.Tech) - Computer Science & Engineering<br>2023 – 2027 | CGPA: 8.1/10 (Until Semester 3)<br>Relevant Courses: Data Structures & Algorithms, Artificial Intelligence & Machine Learning, Software Development</li>
+                <li><strong>SR Educational Academy, Warangal</strong><br>Higher Secondary Education (Class XII)<br>Completed in 2023 | Percentage: 87%</li>
+                <li><strong>SR National High School, Warangal</strong><br>Secondary Education (Class X)<br>Completed in 2021 | Percentage: 100%</li>
+            </ul>
+        </section>
+
+        <section id="technical-skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li> Programming Languages: C, Java, Python</li>
+                <li> Web Development: HTML</li>
+                <li> Database Management: SQLite</li>
+                <li> Tools & Technologies: ChatGPT, Microsoft Office</li>
+                <li> Other Skills: Data Structures & Algorithms, Problem Solving</li>
+            </ul>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li> Artificial Intelligence & Machine Learning (IIIT Hyderabad, Ends March 2025)</li>
+                <li> Program Agnirva AI Internship Program - Fast Track (Completion Date: 14 December 2024)</li>
+            </ul>
+        </section>
+
+        <section id="extracurricular">
+            <h2>Extracurricular Activities</h2>
+            <ul>
+                <li> E-Sports Competitor – Participated in tournaments at Gitam University, Hyderabad</li>
+                <li> Technical Seminars – Engaged in college-level tech events</li>
+            </ul>
+        </section>
+
+        <section id="strengths">
+            <h2>Strengths</h2>
+            <ul>
+                <li> Strong analytical and problem-solving abilities</li>
+                <li> Quick learner with adaptability to new technologies</li>
+                <li> Team player with effective communication skills</li>
+                <li> Time management and multitasking</li>
+            </ul>
+        </section>
+
+        <section id="personal-details">
+            <h2>Personal Details</h2>
+            <ul>
+                <li> Date of Birth: 20/11/2005</li>
+                <li> Languages Known: English, Telugu, Hindi</li>
+                <li> Hobbies: Reading, Playing outdoor sports, Drawing</li>
+                <li> Personal Website: <a href="https://badineniharshith.github.io/Resume" target="_blank">badineniharshith.github.io/Resume</a></li>
+            </ul>
+        </section>
+
+        <div class="declaration">
+            <p><strong>Declaration:</strong> I hereby declare that the above information is true to the best of my knowledge and belief.</p>
+            <p>- Badineni Harshith -</p>
+        </div>
+
+        <!-- Buttons at the Bottom -->
+        <div class="download-buttons">
+            <a href="cv.html">Go to CV Page</a>
+            <a href="cv.pdf" download>Download CV</a>
+            <a href="resume.pdf" download>Download Resume</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Harshith Badineni. All rights reserved.</p>
+        <p><a href="https://badineniharshith.github.io/Resume/" target="_blank">Personal Website</a></p>
+    </footer>
+</body>
+</html>
